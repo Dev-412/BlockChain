@@ -4,6 +4,9 @@ A 4-page Web3 educational website built with pure HTML, CSS, and JavaScript. Cov
 
 > **Arbitrum Builder Pods Assignment**
 
+🌐 Live Demo:
+https://dev-412.github.io/Arbitrum-Workshop/
+
 ## 🌐 Live Pages
 
 | Page | Description |
