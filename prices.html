@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Live Crypto Prices — ArbitrumX</title>
+  <meta name="description" content="Track real-time cryptocurrency prices for Bitcoin, Ethereum, Solana, Polygon, and Arbitrum from CoinGecko." />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header" id="site-header">
+    <nav class="nav-inner">
+      <a href="index.html" class="logo"><span class="logo-icon">⬡</span> ArbitrumX</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" id="nav-home">Home</a></li>
+        <li><a href="concepts.html" id="nav-concepts">Concepts</a></li>
+        <li><a href="prices.html" class="active" id="nav-prices">Live Prices</a></li>
+        <li><a href="simulator.html" id="nav-simulator">Simulator</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </nav>
+  </header>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header" id="prices-header">
+    <div class="container">
+      <span class="section-label">📈 Real-Time Data</span>
+      <h1>Live <span class="gradient-text">Crypto Prices</span></h1>
+      <p>Real-time market data powered by CoinGecko. No API key needed — 100% free and open.</p>
+    </div>
+  </section>
+
+  <!-- PRICES DASHBOARD -->
+  <section class="section" id="prices-section">
+    <div class="container">
+      <div class="prices-toolbar reveal">
+        <div class="search-box" id="search-box">
+          <span>🔍</span>
+          <input type="text" id="search-input" placeholder="Search coins..." aria-label="Search coins" />
+        </div>
+        <div style="display: flex; align-items: center; gap: 16px;">
+          <span class="last-updated" id="last-updated">Loading...</span>
+          <button class="refresh-btn" id="refresh-btn" aria-label="Refresh prices">
+            <span class="refresh-icon">↻</span> Refresh
+          </button>
+        </div>
+      </div>
+
+      <div class="prices-grid" id="prices-grid">
+        <!-- Loading skeletons -->
+        <div class="glass-card price-card skeleton" style="height: 180px;"></div>
+        <div class="glass-card price-card skeleton" style="height: 180px;"></div>
+        <div class="glass-card price-card skeleton" style="height: 180px;"></div>
+        <div class="glass-card price-card skeleton" style="height: 180px;"></div>
+        <div class="glass-card price-card skeleton" style="height: 180px;"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" id="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <span class="footer-logo">⬡ ArbitrumX</span>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="concepts.html">Concepts</a></li>
+          <li><a href="prices.html">Live Prices</a></li>
+          <li><a href="simulator.html">Simulator</a></li>
+        </ul>
+        <p class="footer-info">
+          Built by <strong>Dev</strong> · Arbitrum Builder Pods ·
+          <a href="https://github.com" target="_blank" rel="noopener">GitHub ↗</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/prices.js"></script>
+</body>
+</html>

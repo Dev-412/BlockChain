@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web3 Concepts — ArbitrumX</title>
+  <meta name="description" content="Understand core Web3 concepts through visual comparison cards: Web2 vs Web3, Ethereum vs Bitcoin, Public vs Private Keys, and more." />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header" id="site-header">
+    <nav class="nav-inner">
+      <a href="index.html" class="logo"><span class="logo-icon">⬡</span> ArbitrumX</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" id="nav-home">Home</a></li>
+        <li><a href="concepts.html" class="active" id="nav-concepts">Concepts</a></li>
+        <li><a href="prices.html" id="nav-prices">Live Prices</a></li>
+        <li><a href="simulator.html" id="nav-simulator">Simulator</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </nav>
+  </header>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header" id="concepts-header">
+    <div class="container">
+      <span class="section-label">📚 Reference</span>
+      <h1>Web3 <span class="gradient-text">Concepts</span></h1>
+      <p>Core blockchain fundamentals explained side-by-side. Clear, concise, and visual — no textbook jargon.</p>
+    </div>
+  </section>
+
+  <!-- COMPARISON CARDS -->
+  <section class="section" id="concepts-section">
+    <div class="container">
+      <div class="concepts-grid">
+
+        <!-- Web2 vs Web3 -->
+        <div class="glass-card comparison-card reveal" id="card-web2-web3">
+          <div class="comparison-header">
+            <h3>🌐 Web2 vs Web3</h3>
+            <span class="vs-badge">VS</span>
+          </div>
+          <div class="comparison-body">
+            <div class="comparison-side">
+              <h4>🏢 Web2</h4>
+              <ul>
+                <li>Companies own your data (Google, Meta)</li>
+                <li>Centralized servers — single point of failure</li>
+                <li>Login with email & password</li>
+                <li>Platform can ban or censor you</li>
+                <li>Revenue flows to corporations</li>
+              </ul>
+            </div>
+            <div class="comparison-side">
+              <h4>🔗 Web3</h4>
+              <ul>
+                <li>You own your data and digital assets</li>
+                <li>Decentralized network — no single owner</li>
+                <li>Login with your wallet (MetaMask)</li>
+                <li>Censorship-resistant by design</li>
+                <li>Revenue flows to users & creators</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ethereum vs Bitcoin -->
+        <div class="glass-card comparison-card reveal" id="card-eth-btc">
+          <div class="comparison-header">
+            <h3>⟠ Ethereum vs Bitcoin</h3>
+            <span class="vs-badge">VS</span>
+          </div>
+          <div class="comparison-body">
+            <div class="comparison-side">
+              <h4>₿ Bitcoin</h4>
+              <ul>
+                <li>Digital gold — a store of value</li>
+                <li>Limited scripting, no smart contracts</li>
+                <li>21 million max supply (deflationary)</li>
+                <li>Proof of Work consensus (mining)</li>
+                <li>Focused on being sound money</li>
+              </ul>
+            </div>
+            <div class="comparison-side">
+              <h4>⟠ Ethereum</h4>
+              <ul>
+                <li>World computer — programmable blockchain</li>
+                <li>Full smart contract support (Solidity)</li>
+                <li>No hard cap, but EIP-1559 burn mechanism</li>
+                <li>Proof of Stake consensus (staking)</li>
+                <li>Powers DeFi, NFTs, DAOs, and Layer 2s</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Public Key vs Private Key -->
+        <div class="glass-card comparison-card reveal" id="card-keys">
+          <div class="comparison-header">
+            <h3>🔑 Public Key vs Private Key</h3>
+            <span class="vs-badge">VS</span>
+          </div>
+          <div class="comparison-body">
+            <div class="comparison-side">
+              <h4>📬 Public Key</h4>
+              <ul>
+                <li>Like your home address — safe to share</li>
+                <li>Used to receive crypto and verify signatures</li>
+                <li>Derived from your private key mathematically</li>
+                <li>Anyone can see your balance on-chain</li>
+                <li>Also called your wallet address</li>
+              </ul>
+            </div>
+            <div class="comparison-side">
+              <h4>🔐 Private Key</h4>
+              <ul>
+                <li>Like your house key — never share it</li>
+                <li>Used to sign transactions and prove ownership</li>
+                <li>Losing it means losing all your assets forever</li>
+                <li>Stored in your wallet (MetaMask, Ledger)</li>
+                <li>"Not your keys, not your crypto"</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Blockchain vs Traditional Databases -->
+        <div class="glass-card comparison-card reveal" id="card-blockchain-db">
+          <div class="comparison-header">
+            <h3>🗄️ Blockchain vs Traditional DB</h3>
+            <span class="vs-badge">VS</span>
+          </div>
+          <div class="comparison-body">
+            <div class="comparison-side">
+              <h4>🗃️ Traditional DB</h4>
+              <ul>
+                <li>Controlled by a single admin or company</li>
+                <li>Data can be edited, deleted, or hidden</li>
+                <li>Fast reads/writes — optimized for speed</li>
+                <li>Trust the operator to be honest</li>
+                <li>Private by default (access-controlled)</li>
+              </ul>
+            </div>
+            <div class="comparison-side">
+              <h4>⛓️ Blockchain</h4>
+              <ul>
+                <li>Distributed across thousands of nodes</li>
+                <li>Data is immutable — once written, forever</li>
+                <li>Slower, but cryptographically verifiable</li>
+                <li>Trustless — verify, don't trust</li>
+                <li>Transparent — anyone can audit the data</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" id="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <span class="footer-logo">⬡ ArbitrumX</span>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="concepts.html">Concepts</a></li>
+          <li><a href="prices.html">Live Prices</a></li>
+          <li><a href="simulator.html">Simulator</a></li>
+        </ul>
+        <p class="footer-info">
+          Built by <strong>Dev</strong> · Arbitrum Builder Pods ·
+          <a href="https://github.com" target="_blank" rel="noopener">GitHub ↗</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

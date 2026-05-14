@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Block Mining Simulator — ArbitrumX</title>
+  <meta name="description" content="Interactive blockchain mining simulator. Learn hashing, nonces, proof-of-work, and chain immutability hands-on." />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header" id="site-header">
+    <nav class="nav-inner">
+      <a href="index.html" class="logo"><span class="logo-icon">⬡</span> ArbitrumX</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" id="nav-home">Home</a></li>
+        <li><a href="concepts.html" id="nav-concepts">Concepts</a></li>
+        <li><a href="prices.html" id="nav-prices">Live Prices</a></li>
+        <li><a href="simulator.html" class="active" id="nav-simulator">Simulator</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </nav>
+  </header>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header" id="sim-header">
+    <div class="container">
+      <span class="section-label">⛏ Hands-On</span>
+      <h1>Block Mining <span class="gradient-text">Simulator</span></h1>
+      <p>Experience proof-of-work mining and chain immutability in real-time using SHA-256 hashing.</p>
+    </div>
+  </section>
+
+  <!-- SIMULATOR -->
+  <section class="section" id="sim-section">
+    <div class="container">
+      <div class="sim-chain" id="sim-chain">
+
+        <!-- BLOCK 1 -->
+        <div class="glass-card block-card reveal" id="block-1-card">
+          <div class="block-header">
+            <h3>🧱 Block #1</h3>
+            <span class="block-status invalid" id="block-1-status">Invalid ✗</span>
+          </div>
+          <div class="block-body">
+            <div class="field-group">
+              <label for="block-1-data">Block Data</label>
+              <textarea id="block-1-data" rows="3" placeholder="Enter transaction data...">Alice pays Bob 5 ETH</textarea>
+            </div>
+            <div class="field-group">
+              <label for="block-1-prev">Previous Hash</label>
+              <input type="text" id="block-1-prev" value="0000000000000000" readonly />
+            </div>
+            <div class="field-group">
+              <label for="block-1-nonce">Nonce</label>
+              <input type="number" id="block-1-nonce" value="0" min="0" />
+            </div>
+            <div class="field-group">
+              <label>Hash Output</label>
+              <div class="hash-display" id="block-1-hash">Click "Mine" to compute...</div>
+            </div>
+            <button class="mine-btn" id="mine-btn-1" aria-label="Mine Block 1">⛏ Mine Block</button>
+          </div>
+        </div>
+
+        <!-- CHAIN LINK -->
+        <div class="chain-link" aria-hidden="true">⟶</div>
+
+        <!-- BLOCK 2 -->
+        <div class="glass-card block-card reveal" id="block-2-card">
+          <div class="block-header">
+            <h3>🧱 Block #2</h3>
+            <span class="block-status invalid" id="block-2-status">Invalid ✗</span>
+          </div>
+          <div class="block-body">
+            <div class="field-group">
+              <label for="block-2-data">Block Data</label>
+              <textarea id="block-2-data" rows="3" placeholder="Enter transaction data...">Bob pays Charlie 2 ETH</textarea>
+            </div>
+            <div class="field-group">
+              <label for="block-2-prev">Previous Hash (from Block #1)</label>
+              <input type="text" id="block-2-prev" value="Mine Block 1 first..." readonly />
+            </div>
+            <div class="field-group">
+              <label for="block-2-nonce">Nonce</label>
+              <input type="number" id="block-2-nonce" value="0" min="0" />
+            </div>
+            <div class="field-group">
+              <label>Hash Output</label>
+              <div class="hash-display" id="block-2-hash">Mine Block 1 first, then mine this block...</div>
+            </div>
+            <button class="mine-btn" id="mine-btn-2" aria-label="Mine Block 2">⛏ Mine Block</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- EXPLANATION -->
+      <div class="sim-explanation reveal">
+        <div class="glass-card">
+          <h3>🔗 The Core Insight: Immutability</h3>
+          <p>After mining both blocks, try changing Block 1's data. Block 2's "Previous Hash" no longer matches — the chain breaks! This is how blockchains guarantee that no one can tamper with past transactions without invalidating every block that follows.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" id="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <span class="footer-logo">⬡ ArbitrumX</span>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="concepts.html">Concepts</a></li>
+          <li><a href="prices.html">Live Prices</a></li>
+          <li><a href="simulator.html">Simulator</a></li>
+        </ul>
+        <p class="footer-info">
+          Built by <strong>Dev</strong> · Arbitrum Builder Pods ·
+          <a href="https://github.com" target="_blank" rel="noopener">GitHub ↗</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/simulator.js"></script>
+</body>
+</html>
